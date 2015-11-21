@@ -1,0 +1,13 @@
+select
+  ds,
+  count(city) as n_city,
+  count(*) as n_users,
+from
+  users
+where
+  ds between '2014-08-25' and '2014-09-03'
+group by
+  ds
+order by
+  ds
+;
